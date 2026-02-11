@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Resume Screening System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HR Automated Resume Screening</h1>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('upload')">Upload Resume</button>
+            <button class="tab" onclick="showTab('candidates')">View Candidates</button>
+            <button class="tab" onclick="showTab('jobs')">Job Requirements</button>
+        </div>
+
+        <div id="upload" class="tab-content active">
+            <h2>Upload Resume</h2>
+            <form id="uploadForm">
+                <input type="text" id="name" placeholder="Candidate Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone">
+                <select id="job_id">
+                    <option value="1">Select Job Position</option>
+                    <option value="2">Software Engineer</option>
+                    <option value="3">Data Analyst</option>
+                    <option value="4">Product Manager</option>
+                    <option value="5">UX Designer</option>
+                    <option value="6">Marketing Specialist</option>
+                    <option value="7">Sales Manager</option>
+                    <option value="8">HR Coordinator</option>
+                    <option value="9">Financial Analyst</option>
+                    <option value="10">Customer Support Representative</option>
+                    <option value="11">Operations Manager</option>
+                    <option value="12">Business Analyst</option>
+                    <option value="13">Content Writer</option>
+                    <option value="14">Graphic Designer</option>
+                    <option value="15">IT Support Specialist</option>
+                    <option value="16">Data Scientist</option>
+                    <optioin value="17">Network Engineer</option>
+                        <option value="18">Cybersecurity Analyst</option>
+                        <option value="19">Cloud Architect</option>
+                        <option value="20">DevOps Engineer</option>
+                        <option value="21">Mobile App Developer</option>
+                        <option value="22">QA Engineer</option>
+                        <option value="23">Technical Writer</option>
+                        <option value="24">Project Coordinator</option>
+                        <option value="25">Social Media Manager</option>
+                        <opertion value="26">SEO Specialist</option>
+                            <option value="27">Data Engineer</option>
+                            <option value="28">AI Researcher</option>
+                            <option value="29">Machine Learning Engineer</option>
+                            <option value="30">Blockchain Developer</option>
+                            <option value="31">Game Developer</option>
+                            <option value="32">VR/AR Developer</option>
+                            <option value="33">Robotics Engineer</option>
+                            <option value="34">Embedded Systems Engineer</option>
+                            <option value="35">Hardware Engineer</option>
+                            
+                </select>
+                <input type="file" id="resume" accept=".pdf,.word,.png,.doc,.docx" required>
+                <button type="submit">Upload & Screen</button>
+            </form>
+            <div id="uploadResult"></div>
+        </div>
+
+        <div id="candidates" class="tab-content">
+            <h2>Screened Candidates</h2>
+            <div id="candidatesList"></div>
+        </div>
+
+        <div id="jobs" class="tab-content">
+            <h2>Add Job Requirements</h2>
+            <form id="jobForm">
+                <input type="text" id="jobTitle" placeholder="Job Title" required>
+                <input type="text" id="requiredSkills" placeholder="Required Skills (comma-separated)" required>
+                <input type="number" id="minExperience" placeholder="Min Experience (years)" required>
+                <button type="submit">Add Job</button>
+            </form>
+            <div id="jobsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
